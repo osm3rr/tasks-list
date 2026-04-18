@@ -1,0 +1,11 @@
+{% extends "tasks/_base.html" %}
+
+{% block content %}
+    <ul>
+        {% for to_do in task_list %}
+            <li>{{ to_do.title }} - <small>{{ to_do.created_at }}</small></li>
+        {% empty %}
+            <li>No hay tareas disponibles.</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
